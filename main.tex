@@ -1,0 +1,110 @@
+% for landscape posters, use "a4paper, landscape"
+\documentclass[a4paper]{article}
+\usepackage{better_poster}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=red]{hyperref}
+
+
+% ---- fill in from here
+% poster size - this will scale the poster to the given size.
+% for landscape posters add ", landscape" to the postersize command.
+\postersize{a0paper}
+
+% authors
+\title{Remember Junkyard Wars?}
+\author{Basically that, but drones. Where? Eglin AFB, Florida.}
+
+% type of poster: [exp]erimental results, [methods], [theory]
+% Disclaimer: the original classification had "study" and "intervention" as separate categories. I group them under experimental results.
+\newcommand\postertype{exp} % [exp],[methods],[theory]
+
+\begin{document}
+
+% main point of your study
+\makefinding{
+The \textbf{Dronecon} Hackathon is a multi-day, \textbf{scrappathon}. \textbf{Innovators} will gather to change the way we see the sky.
+}
+
+
+% \makemain{
+% }{
+
+% }
+
+
+% the main text of your poster goes here
+\makemain{
+    % you can have 1 or 2 columns
+    \raggedcolumns
+    \begin{multicols}{2}
+        \section{\underline{Who}}
+        \begin{compactitem}
+            \item Drone enthusiasts
+            \item University, Academy students
+            \item Engineers
+            \item Service members
+            \item Developers
+            \item Allies
+            \item Spooks
+            \item Tinkerers
+            \item Industry and small business
+        \end{compactitem}
+        
+        \section{\underline{What, Why}}
+        \begin{compactitem}
+            \item Experimenting with drones
+            \item Hacking together drones
+            \item Smashing down drones
+            \item Interoperating with drones
+            \item Hacking the drones
+            \item Showing off drones
+            \item Paint-balling the drones
+            \item Night flying the drones
+            \item Jousting with drones
+            \item Machine learning the drones
+            \item Automating the drones
+            \item Spotting the drones
+            \item Fire-teaming with drones
+        \end{compactitem}
+        
+    % this determines where your columns will be separated
+    \columnbreak
+
+        \includegraphics[width=\linewidth]{icons8-ecg-96.png}
+        
+		\section{\underline{How do I sign up?}}
+		
+		\includegraphics[width=\linewidth]{thumb-Uk.png}
+			
+		\begin{compactitem}
+			\item Contact your nearest Spark Cell, or Emerald Spark
+			\item Reach out to friends who've attended BRAVO Hackathons
+			\item Become a Tesseract LNO
+
+		\end{compactitem}
+    
+    \end{multicols}
+}
+% If you have extra figures or data to show
+\makeextracolumn{
+    
+    \includegraphics[width=0.5\linewidth]{uni_logo-3.png}\includegraphics[width=0.5\linewidth]{thumb-junk.png} \newline
+    
+    \includegraphics[width=0.5\linewidth]{thumb-nam-2}\includegraphics[width=0.5\linewidth]{thumb-nam.png} \newline
+    
+    \includegraphics[width=0.5\linewidth]{thumb-deco.png}\includegraphics[width=0.5\linewidth]{thumb-mud.png} \newline
+    
+    \includegraphics[width=0.5\linewidth]{thumb-mud-2.png}\includegraphics[width=0.5\linewidth]{thumb-uni.png} \newline 
+    
+    \huge{\textbf{See you there!}}
+    
+}
+
+
+% footer
+% generate qr code from https://www.qr-code-generator.com/ and replace qr_code.png
+% default: barcode on the left
+\makefooter{images/uni_logo.png}{images/qr-code.png}
+% replace with this like for barcode on the right
+%\makealtfooter{images/uni_logo.png}{images/qr-code.png}
+ 
+\end{document}
