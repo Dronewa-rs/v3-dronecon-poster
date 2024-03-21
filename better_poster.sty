@@ -72,27 +72,35 @@
 }
 
 % makes footer
-\newcommand{\makefooter}[2]{
+\newcommand{\makefooter}[4]{
     \vspace*{\fill}
     \noindent\makebox[\linewidth][c]{%
-      \colorbox{\postertype}{%
-        \parbox[c][0.14\paperheight][c]{\paperwidth}{%
-          \hspace*{\dimexpr\hoffset+\oddsidemargin+1in\relax}%
-          \begin{minipage}[c][0.14\paperheight][c]{0.15\textwidth}
-                \includegraphics[height=0.11\paperheight, left]{#2}
-          \end{minipage}
-          \begin{minipage}[c][0.14\paperheight][c]{0.3\textwidth}
-              \textcolor{white}
-                {\large{
-                   $\leftarrow$ See promo info and photos }
-                }  
-          \end{minipage}
-          \hfill
-          \begin{minipage}[c][0.14\paperheight][c]{0.2\textwidth}
-            \includegraphics[height=0.11\paperheight, left]{#1}
-          \end{minipage}
-        }%
-      }%
+        \colorbox{\postertype}{%
+            \parbox[c][0.14\paperheight][c]{\paperwidth}{%
+                \hspace*{\dimexpr\hoffset+\oddsidemargin+1in\relax}%
+                \begin{minipage}[c][0.14\paperheight][c]{0.15\textwidth}
+                    \includegraphics[height=0.11\paperheight, left]{#2}
+                \end{minipage}
+                \begin{minipage}[c][0.14\paperheight][c]{0.3\textwidth}
+                    \hfill
+                        \textcolor{white}
+                        {\large{
+                            $\leftarrow$ #3 }
+                        }
+                \end{minipage}
+            \hfill
+                \begin{minipage}[c][0.14\paperheight][c]{0.3\textwidth}
+                \textcolor{white}
+                    {\large{
+                        #4 $\rightarrow$}
+                    }
+                    \end{minipage}
+                    \begin{minipage}[c][0.14\paperheight][c]{0.15\textwidth}
+                    \hspace*{-1.2cm}
+                        \includegraphics[height=0.11\paperheight, right]{#1}
+                    \end{minipage}
+                }%
+            }%
     }\par\medskip
 }
 
@@ -104,7 +112,6 @@
         \parbox[c][0.14\paperheight][c]{\paperwidth}{%
           \hspace*{\dimexpr\hoffset+\oddsidemargin+1in\relax}%
           \begin{minipage}[c][0.14\paperheight][c]{0.3\textwidth}
-            % your logo here
             \includegraphics[height=0.11\paperheight, left]{#1}
             \end{minipage}
           \hfill
@@ -112,7 +119,7 @@
             \begin{flushright}
                 \textcolor{white}
                 {\large{
-                    Download the paper $\rightarrow$}
+                    $\rightarrow$}
                 }
                 \end{flushright}
           \end{minipage}
@@ -145,7 +152,7 @@
     \end{tikzpicture}
     \hfill
     \parbox[t][0.55\paperheight][t]{0.3\linewidth}{
-        \section*{Extra Gen AI photos}
+        \section*{Possible views}
         
         {\scriptsize
         #1
